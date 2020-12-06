@@ -24,7 +24,7 @@ int list_erase_even(List* li) {
 
         while (no != NULL && i < li->size) {
             if (no->data % 2 == 0) {
-                list_erase(li, i);
+                list_erase(li, i); // não muda o ponteiro de nó!
             } else {
                 no = no->next;
                 i++;
@@ -45,7 +45,7 @@ int list_splice(List *dest, List *source, int  pos) {
         
         int i = pos;
         DLnode aux = source->begin;
-        while (li != NULL && i > source->size) {
+        while (li != NULL && i > source->size) {  // quem é li?
             li->next = aux;
             aux = aux->next;
         }

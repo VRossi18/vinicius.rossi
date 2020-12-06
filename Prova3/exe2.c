@@ -28,3 +28,6 @@ int verifica(char *s) {
     }
     return 0;
 }
+
+
+// não usou a pilha que foi pedido no exercício
